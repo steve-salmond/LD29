@@ -19,7 +19,7 @@ public class Attraction : MonoBehaviour {
 	public float MaxForce;
 
 
-	void FixedUpdate () 
+	void FixedUpdate() 
 	{
 		Vector2 t = Target.position;
 		Vector2 p = transform.position;
