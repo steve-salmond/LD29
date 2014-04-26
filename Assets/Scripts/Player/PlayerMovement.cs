@@ -26,6 +26,12 @@ public class PlayerMovement : MonoBehaviour {
 	public float GroundCheckRadius = 2;
 	public LayerMask GroundLayerMask;
 
+	/** Left leg. */
+	public Severable LeftLeg;
+
+	/** Right leg. */
+	public Severable RightLeg;
+
 	/** Number of jumps player can make while airborne. */
 	public int AirJumps = 0;
 	
@@ -61,6 +67,12 @@ public class PlayerMovement : MonoBehaviour {
 		// Convert into desired force components.
 		float dx = ix * (grounded ? HorizontalStrength : HorizontalStrengthAirborne);
 		float dy = iy * VerticalStrength + jump;
+
+		// Check if legs are severed.
+		if (LeftLeg.Severed)
+			{ dx *= 0.5f; dy *= 0.5f; }
+		if (RightLeg.Severed)
+			{ dx *= 0.5f; dy *= 0.5f; }
 
 		// Figure out if we need to reduce the force due to speed limits.
 		Vector2 v = rigidbody2D.velocity;

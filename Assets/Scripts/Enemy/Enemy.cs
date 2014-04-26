@@ -7,7 +7,9 @@ public class Enemy : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Attraction.Target = Player.Instance.transform;
+
+		if (Player.Instance)
+			Attraction.Target = Player.Instance.transform;
 	}
 
 //	void Update()

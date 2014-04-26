@@ -5,31 +5,49 @@ public class Severable : MonoBehaviour
 {
 
 	public GameObject SeverEffect;
+	public GameObject SpurtEffect;
 	public LayerMask HurterLayers;
 	public bool SeverChildren = false;
+	public bool DestroyAfterSever = true;
+	public bool Severed
+		{ get { return severed; } }
+
+	private int SeveredLayer = 11;
+	
 	private bool severed = false;
 
 
-	private SpriteRenderer[] spriteRenderers;
-	
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
+		// Check if the object we've collided with can sever us.
 		if ((HurterLayers.value & 1 << collision.gameObject.layer) != 0)
+		{
+//			// Ignore collisions with severed objects.
+//			Severable severable = collision.gameObject.GetComponent<Severable>();
+//			if (severable && severable.severed)
+//				return;
+
+			// Sever away, good sir!
 			Sever(collision);
+		}
 	}
 
 	public void Sever(Collision2D collision = null)
 	{
+		// Check if object has already been severed. 
 		if (severed)
 			return;
 	
 		severed = true;
 
-		Joint2D joint = GetComponent<Joint2D>();
-		if (joint)
-			joint.enabled = false;
-
-		transform.parent = null;
+		// Spawn severing effects.
+		if (SpurtEffect && transform.parent)
+		{
+			GameObject go = Instantiate(SpurtEffect) as GameObject;
+			go.transform.parent = transform.parent;
+			go.transform.position = transform.position;
+			go.transform.rotation = transform.parent.rotation;
+		}
 
 		if (SeverEffect)
 		{
@@ -41,9 +59,38 @@ public class Severable : MonoBehaviour
 			go.transform.parent = transform;
 		}
 
-		spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
-		StartCoroutine(Kill());
+		// Disable any joints that attach object to its parent.
+		Joint2D[] joints = GetComponentsInChildren<Joint2D>();
+		foreach (Joint2D joint in joints)
+			joint.enabled = false;
 
+		// Detach object from parent.
+		transform.parent = null;
+
+		// Allow object to move freely.
+		rigidbody2D.fixedAngle = false;
+
+		// Move all rigidbodies to the severed layer.
+		rigidbody2D.gameObject.layer = SeveredLayer;
+		Rigidbody2D[] bodies = GetComponentsInChildren<Rigidbody2D>();
+		foreach (Rigidbody2D body in bodies)
+			body.gameObject.layer = SeveredLayer;
+
+		// Stop any physics forces being applied to the object.
+		Attraction[] attractions = GetComponentsInChildren<Attraction>();
+		foreach (Attraction attraction in attractions)
+			attraction.enabled = false;
+
+		// Disable player movement if needed.
+		PlayerMovement movement = GetComponent<PlayerMovement>();
+		if (movement)
+			movement.enabled = false;
+
+		// Fade out and destroy object after some time.
+		if (DestroyAfterSever)
+			StartCoroutine(Kill());
+
+		// Sever all children (if desired).
 		if (SeverChildren)
 		{
 			Severable[] severables = GetComponentsInChildren<Severable>();
@@ -52,16 +99,19 @@ public class Severable : MonoBehaviour
 		}
 	}
 
+	/** Disposes of the object after a delay. */
 	private IEnumerator Kill()
 	{
-		Attraction attraction = GetComponent<Attraction>();
-		if (attraction)
-			attraction.enabled = false;
-
 		yield return new WaitForSeconds(3);
 
 		float start = Time.time;
-		float end = start + 0.5f;
+		float end = start + 1;
+
+		ParticleSystem[] particleSystems = GetComponentsInChildren<ParticleSystem>();
+		foreach (ParticleSystem ps in particleSystems)
+			ps.enableEmission = false;
+
+		SpriteRenderer[] spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
 
 		while (Time.time < end)
 		{
@@ -73,6 +123,7 @@ public class Severable : MonoBehaviour
 			yield return new WaitForEndOfFrame();
 		}
 
+		yield return new WaitForSeconds(1);
 		Destroy(gameObject);
 	}
 }

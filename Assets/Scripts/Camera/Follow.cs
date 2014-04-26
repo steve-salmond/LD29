@@ -24,6 +24,9 @@ public class Follow : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 
+		if (!Target)
+			return;
+
 		Vector3 p = Target.position + Offset;
 		transform.position = Vector3.SmoothDamp(transform.position, p, ref velocity, SmoothTime); 
 	}
