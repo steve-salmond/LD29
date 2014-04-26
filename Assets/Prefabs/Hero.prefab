@@ -312,6 +312,7 @@ GameObject:
   - 212: {fileID: 21200020}
   - 60: {fileID: 6000014}
   - 50: {fileID: 5000018}
+  - 114: {fileID: 11400006}
   m_Layer: 8
   m_Name: Hero_Torso
   m_TagString: Untagged
@@ -676,7 +677,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100034}
   m_Mass: 1
-  m_LinearDrag: 1
+  m_LinearDrag: .100000001
   m_AngularDrag: .0500000007
   m_GravityScale: 1
   m_FixedAngle: 1
@@ -1201,6 +1202,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f936eda4957be224b8eb391c788220be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8a8271e296dda449e0ce17b8ef883d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HorizontalStrength: 1000
+  HorizontalSpeedLimit: 10
+  VerticalStrength: 20
+  VerticalSpeedLimit: 10
+  JumpStrength: 2000
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
