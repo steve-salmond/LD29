@@ -1,0 +1,16 @@
+*.sln
+*.csproj
+*.pidb
+*.db
+*.userprefs
+*.blend1
+*.blend2
+*.blend3
+*.blend4
+*.apk
+*.unityproj
+*.DS_Store
+
+/Library
+Temp
+/Build
