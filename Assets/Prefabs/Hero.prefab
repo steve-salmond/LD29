@@ -570,15 +570,15 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100014}
-  m_Mass: .25
+  m_Mass: .100000001
   m_LinearDrag: 1
   m_AngularDrag: 1
   m_GravityScale: 1
   m_FixedAngle: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!50 &5000006
 Rigidbody2D:
   m_ObjectHideFlags: 1
@@ -1172,6 +1172,7 @@ MonoBehaviour:
   Strength: 100
   MinForce: 0
   MaxForce: 100
+  MaxDistance: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1188,6 +1189,7 @@ MonoBehaviour:
   Strength: 1
   MinForce: 1
   MaxForce: 10
+  MaxDistance: 5
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
