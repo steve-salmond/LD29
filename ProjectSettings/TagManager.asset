@@ -14,7 +14,7 @@ TagManager:
   Builtin Layer 7: 
   User Layer 8: Player
   User Layer 9: Sword
-  User Layer 10: 
+  User Layer 10: Enemy
   User Layer 11: 
   User Layer 12: 
   User Layer 13: 
@@ -37,11 +37,19 @@ TagManager:
   User Layer 30: 
   User Layer 31: 
   m_SortingLayers:
+  - name: Backdrop
+    userID: 1
+    uniqueID: 326031501
+    locked: 0
   - name: Default
     userID: 0
     uniqueID: 0
     locked: 0
-  - name: Backdrop
-    userID: 1
-    uniqueID: 326031501
+  - name: Player
+    userID: 2
+    uniqueID: 1559175059
+    locked: 0
+  - name: Foreground
+    userID: 3
+    uniqueID: 2632038383
     locked: 0
