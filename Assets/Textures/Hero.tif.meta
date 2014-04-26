@@ -1,0 +1,148 @@
+fileFormatVersion: 2
+guid: 194943a0b9d64b6479609ad783c60e97
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: Hero_Head
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 839
+        width: 170
+        height: 153
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Hero_Torso
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 565
+        width: 201
+        height: 262
+      alignment: 9
+      pivot: {x: .5, y: .270000011}
+    - name: Hero_RightLeg
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 387
+        width: 93
+        height: 171
+      alignment: 9
+      pivot: {x: .445514977, y: .842591405}
+    - name: Hero_LeftLeg
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 392
+        width: 121
+        height: 170
+      alignment: 9
+      pivot: {x: .260469288, y: .785096645}
+    - name: Hero_RightShoulder
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 885
+        width: 98
+        height: 101
+      alignment: 9
+      pivot: {x: .648294866, y: .699999511}
+    - name: Hero_RightUpperArm
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 710
+        width: 104
+        height: 153
+      alignment: 9
+      pivot: {x: .686541557, y: .799999774}
+    - name: Hero_RightLowerArm
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 470
+        width: 98
+        height: 209
+      alignment: 9
+      pivot: {x: .699999988, y: .800000012}
+    - name: Hero_LeftShoulder
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 892
+        width: 90
+        height: 85
+      alignment: 9
+      pivot: {x: .25, y: .5}
+    - name: Hero_LeftUpperArm
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 764
+        width: 107
+        height: 104
+      alignment: 9
+      pivot: {x: .2277022, y: .682706952}
+    - name: Hero_LeftLowerArm
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 589
+        width: 155
+        height: 150
+      alignment: 9
+      pivot: {x: .205780819, y: .744910061}
+    - name: Hero_Sword
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 76
+        width: 175
+        height: 880
+      alignment: 9
+      pivot: {x: .509923279, y: .148729607}
+  spritePackingTag: 
+  userData: 
