@@ -21,15 +21,30 @@ public class Attraction : MonoBehaviour {
 	/** Maximum distance for attractive force. */
 	public float MaxDistance;
 
+	/** Maximum speed. */
+	public float MaxSpeed;
+
+	void Start()
+	{
+		if (!Body)
+			Body = rigidbody2D;
+	}
+
 
 	void FixedUpdate() 
 	{
+		if (!Target)
+			return;
+
 		Vector2 t = Target.position;
 		Vector2 p = transform.position;
 		Vector2 d = (t - p);
 
 		float distance = Mathf.Clamp(d.magnitude, 0, MaxDistance);
 		Vector2 f = d * Mathf.Clamp(distance * Strength, MinForce, MaxForce);
+
+		if (MaxSpeed > 0)
+			f *= (1 - Mathf.Clamp01(Body.velocity.magnitude / MaxSpeed));
 
 		Body.AddForceAtPosition(f, p);
 	}
