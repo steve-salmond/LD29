@@ -24,6 +24,9 @@ public class Attraction : MonoBehaviour {
 	/** Maximum speed. */
 	public float MaxSpeed;
 
+	/** Whether attraction is active. */
+	public bool Active = true;
+
 	void Start()
 	{
 		if (!Body)
@@ -33,7 +36,7 @@ public class Attraction : MonoBehaviour {
 
 	void FixedUpdate() 
 	{
-		if (!Target)
+		if (!Target || !Active)
 			return;
 
 		Vector2 t = Target.position;
