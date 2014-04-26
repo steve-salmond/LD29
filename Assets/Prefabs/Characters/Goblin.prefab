@@ -288,7 +288,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.4658689, y: 1.51187205, z: 0}
+  m_LocalPosition: {x: -45.3798294, y: 1.58702302, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -823,6 +823,7 @@ MonoBehaviour:
   HurterLayers:
     serializedVersion: 2
     m_Bits: 512
+  SeverChildren: 1
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -838,6 +839,7 @@ MonoBehaviour:
   HurterLayers:
     serializedVersion: 2
     m_Bits: 512
+  SeverChildren: 0
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -853,6 +855,7 @@ MonoBehaviour:
   HurterLayers:
     serializedVersion: 2
     m_Bits: 512
+  SeverChildren: 0
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -868,6 +871,7 @@ MonoBehaviour:
   HurterLayers:
     serializedVersion: 2
     m_Bits: 512
+  SeverChildren: 0
 --- !u!114 &11400022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -883,6 +887,7 @@ MonoBehaviour:
   HurterLayers:
     serializedVersion: 2
     m_Bits: 512
+  SeverChildren: 0
 --- !u!114 &11400024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -898,6 +903,7 @@ MonoBehaviour:
   HurterLayers:
     serializedVersion: 2
     m_Bits: 512
+  SeverChildren: 0
 --- !u!114 &11400026
 MonoBehaviour:
   m_ObjectHideFlags: 1
