@@ -8,6 +8,7 @@ public class Destructible : MonoBehaviour
 
 	public GameObject HitEffect;
 	public GameObject DieEffect;
+	public GameObject Drop;
 	public LayerMask HitterLayers;
 
 	private int hits = 0;
@@ -29,9 +30,12 @@ public class Destructible : MonoBehaviour
 
 		if (hits < HitPoints && HitEffect)
 			Instantiate(HitEffect, p, transform.rotation);
-		else if (hits == HitPoints && DieEffect)
+		else if (hits == HitPoints)
 		{
-			Instantiate(DieEffect, transform.position, transform.rotation);
+			if (DieEffect)
+				Instantiate(DieEffect, transform.position, transform.rotation);
+			if (Drop)
+				Instantiate(Drop, transform.position, transform.rotation);
 			Destroy(gameObject);
 		}
 	}

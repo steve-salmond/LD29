@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class BerserkerVision : MonoBehaviour {
@@ -13,8 +13,8 @@ public class BerserkerVision : MonoBehaviour {
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		spriteRenderer.enabled = false;
 		color = spriteRenderer.color;
-		Player.Instance.OnBeserkStart += HandleOnBeserkStart;
-		Player.Instance.OnBeserkStop += HandleOnBeserkStop;
+		Player.Instance.OnBerserkStart += HandleOnBeserkStart;
+		Player.Instance.OnBerserkStop += HandleOnBeserkStop;
 	}
 	
 	void HandleOnBeserkStart ()

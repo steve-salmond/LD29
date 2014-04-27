@@ -14,15 +14,17 @@ public class Player : MonoBehaviour {
 	public bool Dead
 		{ get; private set; }
 
-	public bool Beserk
+	public bool Berserk
 		{ get; private set; }
 
-	private Severable severable;
-	private bool canBeserk = true;
+	public int BerserkEnergy = 0;
 
-	public delegate void BeserkEventHandler();
-	public event BeserkEventHandler OnBeserkStart;
-	public event BeserkEventHandler OnBeserkStop;
+	private Severable severable;
+	private bool cool = true;
+
+	public delegate void BerserkEventHandler();
+	public event BerserkEventHandler OnBerserkStart;
+	public event BerserkEventHandler OnBerserkStop;
 
 	// Use this for initialization
 	void Awake() {
@@ -38,18 +40,24 @@ public class Player : MonoBehaviour {
 		if (severable.Severed && !Dead)
 			Kill();
 
-		if (Input.GetMouseButtonDown(0) && !Dead)
-			if (!Beserk && canBeserk)
-				StartCoroutine(GoBeserk());
+		if (Input.GetMouseButtonDown(0))
+			if (CanBerserk())
+				StartCoroutine(GoBerserk());
 	}
 
-	private IEnumerator GoBeserk()
+	private bool CanBerserk()
 	{
-		Beserk = true;
-		canBeserk = false;
+		return !Berserk && cool && !Dead && BerserkEnergy > 0;
+	}
 
-		if (OnBeserkStart != null)
-			OnBeserkStart();
+	private IEnumerator GoBerserk()
+	{
+		Berserk = true;
+		cool = false;
+		BerserkEnergy--;
+
+		if (OnBerserkStart != null)
+			OnBerserkStart();
 
 		if (BerserkEffect)
 		{
@@ -60,13 +68,13 @@ public class Player : MonoBehaviour {
 		}
 
 		yield return new WaitForSeconds(BerserkDuration);
-		Beserk = false;
+		Berserk = false;
 
-		if (OnBeserkStop != null)
-			OnBeserkStop();
+		if (OnBerserkStop != null)
+			OnBerserkStop();
 
 		yield return new WaitForSeconds(BerserkCooldown);
-		canBeserk = true;
+		cool = true;
 	}
 	
 	private void Kill()

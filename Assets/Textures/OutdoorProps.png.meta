@@ -1,0 +1,94 @@
+fileFormatVersion: 2
+guid: 46698b277d7877846b0e746703b9a5f5
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 40
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: Tree01
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 52
+        width: 304
+        height: 396
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Tree02
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 56
+        width: 361
+        height: 422
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Rock01
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 379
+        width: 157
+        height: 105
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Rock02
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 160
+        width: 225
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Rock03
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 40
+        width: 141
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 

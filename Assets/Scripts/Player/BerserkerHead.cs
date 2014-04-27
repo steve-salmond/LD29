@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class BerserkerHead : MonoBehaviour {
@@ -9,8 +9,8 @@ public class BerserkerHead : MonoBehaviour {
 	
 	public void Start()
 	{
-		Player.Instance.OnBeserkStart += HandleOnBeserkStart;
-		Player.Instance.OnBeserkStop += HandleOnBeserkStop;
+		Player.Instance.OnBerserkStart += HandleOnBeserkStart;
+		Player.Instance.OnBerserkStop += HandleOnBeserkStop;
 	}
 	
 	void HandleOnBeserkStart ()

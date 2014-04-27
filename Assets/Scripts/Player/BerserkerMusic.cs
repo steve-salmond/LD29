@@ -11,7 +11,7 @@ public class BerserkerMusic : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		if (Player.Instance.Beserk)
+		if (Player.Instance.Berserk)
 		{
 			// audio.volume = 1;
 			audio.pitch  = 2;

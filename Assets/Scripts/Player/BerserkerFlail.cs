@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class BerserkerFlail : MonoBehaviour {
@@ -12,7 +12,7 @@ public class BerserkerFlail : MonoBehaviour {
 
 	void Update()
 	{
-		if (Player.Instance.Beserk)
+		if (Player.Instance.Berserk)
 		{
 			Shoulder.AddTorque(Strength);
 			Control.Active = false;
