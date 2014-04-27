@@ -102,24 +102,35 @@ public class Severable : MonoBehaviour
 	/** Disposes of the object after a delay. */
 	private IEnumerator Kill()
 	{
-		yield return new WaitForSeconds(3);
-
 		float start = Time.time;
 		float end = start + 1;
+		AudioSource[] audios = GetComponentsInChildren<AudioSource>();
+		while (Time.time < end)
+		{
+			float a = 1 - Mathf.Clamp01((Time.time - start));
+			foreach (AudioSource source in audios)
+				if (source)
+					source.volume = Mathf.Min(a, source.volume);
+			
+			yield return new WaitForEndOfFrame();
+		}
+
+		yield return new WaitForSeconds(2);
+
+		start = Time.time;
+		end = start + 1;
 
 		ParticleSystem[] particleSystems = GetComponentsInChildren<ParticleSystem>();
 		foreach (ParticleSystem ps in particleSystems)
 			ps.enableEmission = false;
 
 		SpriteRenderer[] spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
-
 		while (Time.time < end)
 		{
 			float a = 1 - Mathf.Clamp01((Time.time - start));
 			foreach (SpriteRenderer r in spriteRenderers)
 				if (r)
 					r.color = new Color(1, 1, 1, Mathf.Min(a, r.color.a));
-
 			yield return new WaitForEndOfFrame();
 		}
 

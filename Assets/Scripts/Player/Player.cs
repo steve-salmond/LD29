@@ -6,6 +6,8 @@ public class Player : MonoBehaviour {
 	public float BerserkDuration = 3;
 	public float BerserkCooldown = 5;
 
+	public GameObject BerserkEffect;
+
 	public static Player Instance
 		{ get; private set; }
 
@@ -48,6 +50,14 @@ public class Player : MonoBehaviour {
 
 		if (OnBeserkStart != null)
 			OnBeserkStart();
+
+		if (BerserkEffect)
+		{
+			GameObject go = Instantiate(BerserkEffect) as GameObject;
+			go.transform.parent = transform;
+			go.transform.position = transform.position;
+			go.transform.rotation = transform.rotation;
+		}
 
 		yield return new WaitForSeconds(BerserkDuration);
 		Beserk = false;

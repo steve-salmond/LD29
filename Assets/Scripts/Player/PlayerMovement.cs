@@ -34,6 +34,9 @@ public class PlayerMovement : MonoBehaviour {
 
 	/** Number of jumps player can make while airborne. */
 	public int AirJumps = 0;
+
+	/** Jump sound. */
+	public AudioClip JumpSound;
 	
 	/** Number of jumps player has made since last grounding. */
 	private int jumps = 0;
@@ -73,6 +76,9 @@ public class PlayerMovement : MonoBehaviour {
 			{ dx *= 0.5f; dy *= 0.5f; }
 		if (RightLeg.Severed)
 			{ dx *= 0.5f; dy *= 0.5f; }
+
+		if (jump > 0)
+			audio.PlayOneShot(JumpSound);
 
 		// Figure out if we need to reduce the force due to speed limits.
 		Vector2 v = rigidbody2D.velocity;
