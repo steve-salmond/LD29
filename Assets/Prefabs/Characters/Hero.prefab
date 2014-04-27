@@ -1440,7 +1440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd03a08e622b464887eb4654fd6757f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BerserkDuration: 3
+  BerserkDuration: 4
   BerserkCooldown: 5
   BerserkEffect: {fileID: 100000, guid: 28a6f01885a0cdf4aa5d4632eeae5f50, type: 2}
 --- !u!114 &11400002
@@ -1499,10 +1499,10 @@ MonoBehaviour:
   VerticalSpeedLimit: 10
   JumpStrength: 14000
   GroundCheckOffset: {x: 0, y: -1.5}
-  GroundCheckRadius: .5
+  GroundCheckRadius: 1
   GroundLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 4097
   LeftLeg: {fileID: 11400026}
   RightLeg: {fileID: 11400024}
   AirJumps: 0

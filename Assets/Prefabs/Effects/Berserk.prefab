@@ -67,16 +67,16 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .100000001
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 20
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -140,16 +140,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Clips:
   - {fileID: 8300000, guid: c3e4c81b3321d1649bbd9f4f320b813d, type: 3}
-  - {fileID: 8300000, guid: 9f28bebf9e7f95d47bfcfdd3369c1230, type: 3}
   - {fileID: 8300000, guid: ff65d89198e10b8499a5908159795b77, type: 3}
-  - {fileID: 8300000, guid: ac9b4f9a361024543b6296901a8b6e48, type: 3}
-  - {fileID: 8300000, guid: 7c1956268d8f33e4b8de27954db723f7, type: 3}
-  - {fileID: 8300000, guid: 9bf25401c11901544bea1d1aca55912f, type: 3}
   - {fileID: 8300000, guid: 92085b760b13d9e45a6e65d0f1114bcb, type: 3}
-  - {fileID: 8300000, guid: 7060a129ac3eb1543ba9514c44e4574e, type: 3}
-  - {fileID: 8300000, guid: 480d19c8ab7a61d4b8b7ecd6474fec05, type: 3}
-  - {fileID: 8300000, guid: e99d8a8021fda6e4f8d11fea144559b9, type: 3}
-  - {fileID: 8300000, guid: 38bdd848137bed748b84051fb8728ba1, type: 3}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1

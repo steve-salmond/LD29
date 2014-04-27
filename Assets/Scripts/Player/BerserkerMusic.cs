@@ -12,8 +12,14 @@ public class BerserkerMusic : MonoBehaviour {
 	void Update () {
 	
 		if (Player.Instance.Beserk)
-			audio.volume = 1;
+		{
+			// audio.volume = 1;
+			audio.pitch  = 2;
+		}
 		else
-			audio.volume = 0.25f;
+		{
+			// audio.volume = 0.5f;
+			audio.pitch  = 0.5f;
+		}
 	}
 }
