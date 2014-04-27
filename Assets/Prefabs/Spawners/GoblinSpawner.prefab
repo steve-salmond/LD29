@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a4718e6b65412d45be8ef9146864f77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Template: {fileID: 100014, guid: 158234ea26957424f8c20fef8e842e9c, type: 2}
+  Template: {fileID: 100000, guid: 88ad1b8ac29996649a401029f3568c6b, type: 2}
   Limit: 1
   IntervalMin: 0
   IntervalMax: 0

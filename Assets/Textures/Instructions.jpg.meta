@@ -68,7 +68,7 @@ TextureImporter:
         serializedVersion: 2
         x: 18
         y: 28
-        width: 375
+        width: 317
         height: 178
       alignment: 0
       pivot: {x: .5, y: .5}
@@ -79,6 +79,24 @@ TextureImporter:
         y: 259
         width: 337
         height: 251
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Instructions_4
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 7
+        width: 269
+        height: 201
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Instructions_5
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 54
+        width: 341
+        height: 173
       alignment: 0
       pivot: {x: .5, y: .5}
   spritePackingTag: 

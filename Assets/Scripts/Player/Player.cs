@@ -30,7 +30,7 @@ public class Player : MonoBehaviour {
 	void Awake() {
 		Instance = this;
 		severable = GetComponent<Severable>();
-
+		Fader.Instance.FadeIn();
 	}
 
 
@@ -43,6 +43,9 @@ public class Player : MonoBehaviour {
 		if (Input.GetMouseButtonDown(0))
 			if (CanBerserk())
 				StartCoroutine(GoBerserk());
+
+		if (Input.GetKey(KeyCode.Escape))
+			Application.Quit();
 	}
 
 	private bool CanBerserk()
@@ -80,7 +83,8 @@ public class Player : MonoBehaviour {
 	private void Kill()
 	{
 		Dead = true;
-		Invoke("Restart", 5);
+		Fader.Instance.FadeOut();
+		Invoke("Restart", 5.1f);
 	}
 
 	private void Restart()
