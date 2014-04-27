@@ -453,8 +453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e8b6d299a5e7ef4e9e18eeae7e0e493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinPitch: .800000012
-  MaxPitch: 1.20000005
+  MinPitch: 2
+  MaxPitch: 2.5
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
