@@ -6397,7 +6397,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   Strength: 2
   MinForce: 0
-  MaxForce: 20
+  MaxForce: 30
   MaxDistance: 5
   MaxSpeed: 10
   Active: 1
@@ -12279,7 +12279,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   Strength: 2
   MinForce: 0
-  MaxForce: 20
+  MaxForce: 30
   MaxDistance: 5
   MaxSpeed: 10
   Active: 1
@@ -16647,7 +16647,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   Strength: 2
   MinForce: 0
-  MaxForce: 20
+  MaxForce: 30
   MaxDistance: 5
   MaxSpeed: 10
   Active: 1
@@ -17447,7 +17447,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   Strength: 2
   MinForce: 0
-  MaxForce: 20
+  MaxForce: 30
   MaxDistance: 5
   MaxSpeed: 10
   Active: 1
@@ -18852,7 +18852,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   Strength: 2
   MinForce: 0
-  MaxForce: 20
+  MaxForce: 30
   MaxDistance: 5
   MaxSpeed: 10
   Active: 1
@@ -21701,7 +21701,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   Strength: 2
   MinForce: 0
-  MaxForce: 20
+  MaxForce: 30
   MaxDistance: 5
   MaxSpeed: 10
   Active: 1
@@ -29098,7 +29098,7 @@ Transform:
   m_GameObject: {fileID: 1631616837}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 139222686}
 --- !u!114 &1631616839

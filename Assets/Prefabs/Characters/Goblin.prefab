@@ -802,7 +802,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   Strength: 2
   MinForce: 0
-  MaxForce: 20
+  MaxForce: 30
   MaxDistance: 5
   MaxSpeed: 10
   Active: 1
