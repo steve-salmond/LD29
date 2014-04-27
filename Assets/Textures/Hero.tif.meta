@@ -144,5 +144,14 @@ TextureImporter:
         height: 880
       alignment: 9
       pivot: {x: .518615365, y: .197128758}
+    - name: Hero_Head_Berserk
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 197
+        width: 176
+        height: 150
+      alignment: 9
+      pivot: {x: .533077061, y: .409442335}
   spritePackingTag: 
   userData: 

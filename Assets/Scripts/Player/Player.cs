@@ -26,6 +26,7 @@ public class Player : MonoBehaviour {
 	void Awake() {
 		Instance = this;
 		severable = GetComponent<Severable>();
+
 	}
 
 

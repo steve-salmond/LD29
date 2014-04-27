@@ -10,21 +10,15 @@ public class BerserkerFlail : MonoBehaviour {
 	public float Strength = 20;
 
 
-	public void Start()
+	void Update()
 	{
-		Player.Instance.OnBeserkStart += HandleOnBeserkStart;
-		Player.Instance.OnBeserkStop += HandleOnBeserkStop;
-	}
-
-	void HandleOnBeserkStart ()
-	{
-		Shoulder.AddTorque(Strength);
-		Control.Active = false;
-	}
-
-	void HandleOnBeserkStop ()
-	{
-		Control.Active = true;
+		if (Player.Instance.Beserk)
+		{
+			Shoulder.AddTorque(Strength);
+			Control.Active = false;
+		}
+		else
+			Control.Active = true;
 	}
 
 

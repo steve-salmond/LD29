@@ -35,8 +35,8 @@ public class BerserkerVision : MonoBehaviour {
 		float end = start + duration;
 		while (Time.time <= end)
 		{
-			color.a = (Time.time - start) / duration; 
-			spriteRenderer.color = color;
+			color.a = (Time.time - start) / duration * 0.5f; 
+			spriteRenderer.color = new Color(color.r, color.g, color.b, color.a);
 			yield return new WaitForEndOfFrame();
 		}
 	}
@@ -48,8 +48,8 @@ public class BerserkerVision : MonoBehaviour {
 		float end = start + duration;
 		while (Time.time <= end)
 		{
-			color.a = 1 - (Time.time - start) / duration; 
-			spriteRenderer.color = color;
+			color.a = (1 - (Time.time - start) / duration) * 0.5f; 
+			spriteRenderer.color = new Color(color.r, color.g, color.b, color.a);
 			yield return new WaitForEndOfFrame();
 		}
 		spriteRenderer.enabled = false;
