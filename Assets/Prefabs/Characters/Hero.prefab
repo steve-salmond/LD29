@@ -1797,7 +1797,7 @@ MonoBehaviour:
   SpurtEffect: {fileID: 100000, guid: ec44ca5e6030982448c87a7cee8b5a0c, type: 2}
   HurterLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 17408
   SeverChildren: 0
   DestroyAfterSever: 0
 --- !u!114 &11400014
@@ -1815,7 +1815,7 @@ MonoBehaviour:
   SpurtEffect: {fileID: 100000, guid: ec44ca5e6030982448c87a7cee8b5a0c, type: 2}
   HurterLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 17408
   SeverChildren: 0
   DestroyAfterSever: 0
 --- !u!114 &11400016
@@ -1833,7 +1833,7 @@ MonoBehaviour:
   SpurtEffect: {fileID: 100000, guid: ec44ca5e6030982448c87a7cee8b5a0c, type: 2}
   HurterLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 17408
   SeverChildren: 0
   DestroyAfterSever: 1
 --- !u!114 &11400018
@@ -1851,7 +1851,7 @@ MonoBehaviour:
   SpurtEffect: {fileID: 100000, guid: ec44ca5e6030982448c87a7cee8b5a0c, type: 2}
   HurterLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 17408
   SeverChildren: 0
   DestroyAfterSever: 0
 --- !u!114 &11400020
@@ -1869,7 +1869,7 @@ MonoBehaviour:
   SpurtEffect: {fileID: 100000, guid: ec44ca5e6030982448c87a7cee8b5a0c, type: 2}
   HurterLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 17408
   SeverChildren: 0
   DestroyAfterSever: 1
 --- !u!114 &11400022
@@ -1887,7 +1887,7 @@ MonoBehaviour:
   SpurtEffect: {fileID: 100000, guid: ec44ca5e6030982448c87a7cee8b5a0c, type: 2}
   HurterLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 17408
   SeverChildren: 0
   DestroyAfterSever: 0
 --- !u!114 &11400024
@@ -1905,7 +1905,7 @@ MonoBehaviour:
   SpurtEffect: {fileID: 100000, guid: ec44ca5e6030982448c87a7cee8b5a0c, type: 2}
   HurterLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 17408
   SeverChildren: 0
   DestroyAfterSever: 0
 --- !u!114 &11400026
@@ -1923,7 +1923,7 @@ MonoBehaviour:
   SpurtEffect: {fileID: 100000, guid: ec44ca5e6030982448c87a7cee8b5a0c, type: 2}
   HurterLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 17408
   SeverChildren: 0
   DestroyAfterSever: 0
 --- !u!114 &11400028
@@ -1941,7 +1941,7 @@ MonoBehaviour:
   SpurtEffect: {fileID: 0}
   HurterLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 17408
   SeverChildren: 1
   DestroyAfterSever: 0
 --- !u!114 &11400030
@@ -1959,7 +1959,7 @@ MonoBehaviour:
   SpurtEffect: {fileID: 100000, guid: ec44ca5e6030982448c87a7cee8b5a0c, type: 2}
   HurterLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 17408
   SeverChildren: 0
   DestroyAfterSever: 0
 --- !u!114 &11400032

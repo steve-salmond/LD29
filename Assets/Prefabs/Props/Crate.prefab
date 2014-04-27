@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 280fb72d431f04843aa8f069f13e9e2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoints: 3
+  HitPoints: 2
   HitEffect: {fileID: 100000, guid: 16903c25b91b2e24d999f18a6da5104f, type: 2}
   DieEffect: {fileID: 100000, guid: 57f5b7b6520534b4082ebef8573ae99c, type: 2}
   Drop: {fileID: 100000, guid: 84101e9bc8f897c428ba49756eea328a, type: 2}
