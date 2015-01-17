@@ -41,10 +41,15 @@ public class PlayerMovement : MonoBehaviour {
 	/** Number of jumps player has made since last grounding. */
 	private int jumps = 0;
 
+    private AlternatingTorque _leftLegTorque;
+    private AlternatingTorque _rightLegTorque;
+
 
 	// Use this for initialization
-	void Start () {
-	
+	void Start () 
+    {
+        _leftLegTorque = LeftLeg.GetComponent<AlternatingTorque>();
+        _rightLegTorque = RightLeg.GetComponent<AlternatingTorque>();
 	}
 	
 	// Update is called once per frame
@@ -54,6 +59,10 @@ public class PlayerMovement : MonoBehaviour {
 		float ix = Input.GetAxis("Horizontal");
 		float iy = Input.GetAxis("Vertical");
 		float jump = Input.GetButtonDown("Jump") ? JumpStrength : 0;
+
+        // Turn leg motion off when player is stationary.
+        _leftLegTorque.enabled = ix != 0;
+        _rightLegTorque.enabled = ix != 0;
 
 		// If player is wanting to jump, check whether they are grounded.
 		// If not, allow up to JumpCount jumps, then ignore further input.
@@ -77,6 +86,7 @@ public class PlayerMovement : MonoBehaviour {
 		if (RightLeg.Severed)
 			{ dx *= 0.5f; dy *= 0.5f; }
 
+        // Play sound when player jumps.
 		if (jump > 0)
 			audio.PlayOneShot(JumpSound);
 

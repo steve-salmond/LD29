@@ -40,7 +40,7 @@ public class Player : MonoBehaviour {
 		if (severable.Severed && !Dead)
 			Kill();
 
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetButtonDown("Fire1"))
 			if (CanBerserk())
 				StartCoroutine(GoBerserk());
 
