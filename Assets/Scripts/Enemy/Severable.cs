@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Severable : MonoBehaviour 
@@ -7,6 +7,9 @@ public class Severable : MonoBehaviour
 	public GameObject SeverEffect;
 	public GameObject SpurtEffect;
 	public LayerMask HurterLayers;
+
+    public float Health = 1;
+
 	public bool SeverChildren = false;
 	public bool DestroyAfterSever = true;
 	public bool Severed
@@ -27,10 +30,22 @@ public class Severable : MonoBehaviour
 //			if (severable && severable.severed)
 //				return;
 
+            // Reduce object's health according to collision strength.
+            float damage = GetCollisionDamage(collision);
+            Health = Mathf.Clamp01(Health - damage);
+
 			// Sever away, good sir!
-			Sever(collision);
+            if (Health == 0 && !severed)
+			    Sever(collision);
 		}
 	}
+
+    private float GetCollisionDamage(Collision2D collision)
+    {
+        float magnitude = collision.relativeVelocity.magnitude;
+        // Debug.Log("Magnitude: " + magnitude);
+        return Mathf.Clamp01(magnitude / 200.0f);
+    }
 
 	public void Sever(Collision2D collision = null)
 	{

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Player : MonoBehaviour {
@@ -40,9 +40,17 @@ public class Player : MonoBehaviour {
 		if (severable.Severed && !Dead)
 			Kill();
 
+
+        if (Input.GetButton("Fire3"))
+            Berserk = true;
+        else
+            Berserk = false;
+
+        /*
 		if (Input.GetButtonDown("Fire1"))
 			if (CanBerserk())
 				StartCoroutine(GoBerserk());
+        */
 
 		if (Input.GetKey(KeyCode.Escape))
 			Application.Quit();

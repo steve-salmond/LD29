@@ -87,11 +87,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -100.891808, y: 3.59498477, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400006}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -103,6 +104,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400006}
+  m_RootOrder: 1
 --- !u!4 &400004
 Transform:
   m_ObjectHideFlags: 1
@@ -114,6 +116,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400006}
+  m_RootOrder: 0
 --- !u!4 &400006
 Transform:
   m_ObjectHideFlags: 1
@@ -127,6 +130,7 @@ Transform:
   - {fileID: 400004}
   - {fileID: 400002}
   m_Father: {fileID: 400000}
+  m_RootOrder: 0
 --- !u!50 &5000000
 Rigidbody2D:
   m_ObjectHideFlags: 1
@@ -377,6 +381,7 @@ MonoBehaviour:
   HurterLayers:
     serializedVersion: 2
     m_Bits: 512
+  Health: .25
   SeverChildren: 0
   DestroyAfterSever: 1
 --- !u!114 &11400010
@@ -395,6 +400,7 @@ MonoBehaviour:
   HurterLayers:
     serializedVersion: 2
     m_Bits: 512
+  Health: .25
   SeverChildren: 1
   DestroyAfterSever: 1
 --- !u!114 &11400012
@@ -413,6 +419,7 @@ MonoBehaviour:
   HurterLayers:
     serializedVersion: 2
     m_Bits: 512
+  Health: .25
   SeverChildren: 0
   DestroyAfterSever: 1
 --- !u!114 &11400014
@@ -459,9 +466,8 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: -2
   m_SortingLayerID: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300004, guid: 5342e58d27f26b14bb47537e7d2bc476, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200002
@@ -482,9 +488,8 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: -4
   m_SortingLayerID: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: 21300002, guid: 5342e58d27f26b14bb47537e7d2bc476, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200004
@@ -505,9 +510,8 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 3
   m_SortingLayerID: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5342e58d27f26b14bb47537e7d2bc476, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!233 &23300000

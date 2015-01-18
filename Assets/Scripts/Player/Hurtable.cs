@@ -7,7 +7,7 @@ public class Hurtable : MonoBehaviour
 	public GameObject HurtEffect;
 	public LayerMask HurterLayers;
 	public bool SeverChildren = false;
-	private bool severed = false;
+	// private bool severed = false;
 	
 	
 //	private SpriteRenderer[] spriteRenderers;
