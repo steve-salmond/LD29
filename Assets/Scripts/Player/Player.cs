@@ -1,7 +1,10 @@
 using UnityEngine;
 using System.Collections;
 
-public class Player : MonoBehaviour {
+public enum Facing { Left, Right };
+
+public class Player : MonoBehaviour 
+{
 
 	public float BerserkDuration = 3;
 	public float BerserkCooldown = 5;
@@ -17,6 +20,9 @@ public class Player : MonoBehaviour {
 	public bool Berserk
 		{ get; private set; }
 
+    public Facing Facing
+    { get; private set; }
+    
 	public int BerserkEnergy = 0;
 
 	private Severable severable;
@@ -28,7 +34,9 @@ public class Player : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake() {
-		Instance = this;
+		
+        Instance = this;
+        Facing = Facing.Right;
 		severable = GetComponent<Severable>();
 		Fader.Instance.FadeIn();
 	}
@@ -40,11 +48,15 @@ public class Player : MonoBehaviour {
 		if (severable.Severed && !Dead)
 			Kill();
 
-
         if (Input.GetButton("Fire3"))
             Berserk = true;
         else
             Berserk = false;
+
+        if (Input.GetAxis("Horizontal") > 0)
+            Facing = Facing.Right;
+        else if (Input.GetAxis("Horizontal") < 0)
+            Facing = Facing.Left;
 
         /*
 		if (Input.GetButtonDown("Fire1"))

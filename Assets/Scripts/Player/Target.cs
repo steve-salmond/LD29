@@ -4,8 +4,20 @@ using System.Collections;
 public class Target : MonoBehaviour 
 {
 
-	public Transform Idle;
-    public Transform Active;
+	public Transform FacingLeftIdle;
+    public Transform FacingLeftActive;
+    public Transform FacingRightIdle;
+    public Transform FacingRightActive;
+
+    public Transform Idle
+    { get { return FacingRight ? FacingRightIdle : FacingLeftIdle;  } }
+
+    public Transform Active
+    { get { return FacingRight ? FacingRightActive : FacingLeftActive; } }
+
+    public bool FacingRight
+    { get { return Player.Instance.Facing == Facing.Right; } }
+
     public string Button;
 
 	public Transform Hero;
@@ -23,15 +35,15 @@ public class Target : MonoBehaviour
         {
             if (Time.time > _nextTransition)
             {
-                if (_current == null || _current == Idle)
-                {
-                    _nextTransition = Time.time + ActiveInterval;
-                    _current = Active;
-                }
-                else if (_current == Active)
+                if (_current != null && _current == Active)
                 {
                     _current = Idle;
                     _nextTransition = Time.time + IdleInterval;
+                }
+                else
+                {
+                    _nextTransition = Time.time + ActiveInterval;
+                    _current = Active;
                 }
             }
 
