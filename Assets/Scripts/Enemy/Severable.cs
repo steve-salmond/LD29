@@ -101,6 +101,11 @@ public class Severable : MonoBehaviour
 		if (movement)
 			movement.enabled = false;
 
+        // Disable facing.
+        PlayerFacing[] facings = GetComponentsInChildren<PlayerFacing>();
+        foreach (var facing in facings)
+            facing.enabled = false;
+
 		// Fade out and destroy object after some time.
 		if (DestroyAfterSever)
 			StartCoroutine(Kill());

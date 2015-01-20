@@ -1105,7 +1105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SeverEffect: {fileID: 100000, guid: 3dc30ecdda4f9c4429c0ef42702ba935, type: 2}
-  SpurtEffect: {fileID: 100000, guid: 6c7428f6b2b083a499e1046b0c4f0a1b, type: 2}
+  SpurtEffect: {fileID: 0}
   HurterLayers:
     serializedVersion: 2
     m_Bits: 512
